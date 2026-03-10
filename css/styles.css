@@ -152,3 +152,33 @@ opacity:0.25;
 pointer-events:none;
 
 }
+
+.videos{
+
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+
+}
+
+.video-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+
+}
+
+.video-item iframe{
+
+border-radius:10px;
+
+}
+
+.video-item h3{
+
+margin-top:10px;
+font-weight:400;
+
+}
