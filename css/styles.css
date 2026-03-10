@@ -195,8 +195,12 @@ text-align:center;
 .album-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:40px;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:50px;
+
+justify-items:center;
 
 }
 
