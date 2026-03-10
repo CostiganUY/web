@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,187 +10,127 @@
 
 <link rel="icon" href="assets/img/Logo2026PNG.png">
 
+<link rel="stylesheet" href="css/styles.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:Inter, sans-serif;
-background:#0e0e0e;
-color:white;
-}
-
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:url("assets/img/Foto 2026 -5-.jpg") center/cover no-repeat;
-}
-
-header h1{
-font-size:4rem;
-letter-spacing:4px;
-}
-
-header p{
-opacity:0.7;
-}
-
-button{
-background:white;
-border:none;
-padding:12px 25px;
-margin:10px;
-cursor:pointer;
-}
-
-section{
-max-width:1000px;
-margin:auto;
-padding:80px 20px;
-}
-
-h2{
-font-weight:600;
-letter-spacing:2px;
-margin-bottom:30px;
-}
-
-.music-links a{
-display:inline-block;
-margin:10px;
-color:white;
-text-decoration:none;
-border:1px solid white;
-padding:10px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-}
-
-.album img{
-width:100%;
-}
-
-.show{
-border-bottom:1px solid #333;
-padding:10px 0;
-}
-
-footer{
-text-align:center;
-padding:40px;
-opacity:0.6;
-}
-
-</style>
 
 </head>
 
+
 <body>
 
-<header>
+<header class="hero">
+
+<div class="hero-overlay">
 
 <h1>ALGAS</h1>
-<p>Nuevo disco — 20.03.2026</p>
 
-<div class="music-links">
+<p>Nuevo disco — disponible 20.03.2026</p>
 
-<a href="https://open.spotify.com/artist/4jYRxPIDuCFBbVbEHp3htD" target="_blank">Spotify</a>
+<div class="hero-buttons">
 
-<a href="https://costiganuy.bandcamp.com" target="_blank">Bandcamp</a>
+<a href="#" class="btn">
+Disponible 20.03
+</a>
 
-<a href="https://soundcloud.com/coestigan-uy" target="_blank">SoundCloud</a>
+<a href="https://open.spotify.com/artist/4jYRxPIDuCFBbVbEHp3htD"
+target="_blank"
+class="btn-outline">
 
-<a href="https://www.youtube.com/channel/UCD0F742lNMLHPq2b75_IimQ" target="_blank">YouTube</a>
+Escuchar CÖSTIGAN
+
+</a>
+
+</div>
 
 </div>
 
 </header>
 
-<section>
 
-<h2>Bio</h2>
+
+<section class="singles">
+
+<h2>Adelantos</h2>
+
+<div class="singles-grid">
+
+<div class="single">
+
+<h3>Botánico</h3>
+
+</div>
+
+<div class="single">
+
+<h3>Amanda</h3>
+
+</div>
+
+<div class="single">
+
+<h3>Pulitzer</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="bio">
+
+<h2>CÖSTIGAN</h2>
 
 <p>
+
 Entre olvidadas recetas, introspectivos viajes y discusiones interminables con los sueños,
 subyace un pequeño universo llamado CÖSTIGAN.
+
 Nacido en Montevideo, el proyecto comenzó como una búsqueda solista
-y con el tiempo se transformó en una banda en constante mutación.
+y con el tiempo se transformó en una banda con identidad propia dentro del indie uruguayo.
+
 </p>
 
 </section>
 
-<section>
 
-<h2>Discografía</h2>
 
-<div class="grid">
-
-<div class="album">
-<img src="img/AlgunasLagunas.jpeg">
-<p>Algunas Lagunas (2020)</p>
-</div>
-
-<div class="album">
-<img src="img/Tapa_EP.png">
-<p>Mundano Vol.1 (2021)</p>
-</div>
-
-<div class="album">
-<img src="assets/img/algas-cover.jpg">
-<p>ALGAS (2026)</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Singles de ALGAS</h2>
-
-<div class="grid">
-
-<div>Botánico</div>
-<div>Amanda</div>
-<div>Pulitzer</div>
-
-</div>
-
-</section>
-
-<section>
+<section class="shows">
 
 <h2>Próximos shows</h2>
 
-<div class="show">Fechas a anunciar</div>
+<p>Fechas a anunciar</p>
 
 </section>
 
-<section>
 
-<h2>Contacto</h2>
-
-<p>
-Montevideo, Uruguay<br>
-costiganuy@gmail.com
-</p>
-
-</section>
 
 <footer>
 
-CÖSTIGAN © 2026
+<p>
+
+Montevideo, Uruguay
+
+<br>
+
+contacto: costiganuy@gmail.com
+
+</p>
+
+<div class="social">
+
+<a href="https://open.spotify.com/artist/4jYRxPIDuCFBbVbEHp3htD" target="_blank">Spotify</a>
+
+<a href="https://www.youtube.com/channel/UCD0F742lNMLHPq2b75_IimQ" target="_blank">YouTube</a>
+
+<a href="https://soundcloud.com/coestigan-uy" target="_blank">SoundCloud</a>
+
+</div>
 
 </footer>
 
 </body>
+
 </html>
