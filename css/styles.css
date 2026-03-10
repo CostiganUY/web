@@ -330,3 +330,52 @@ transform:scale(1.05);
 
 }
 
+.album{
+
+text-decoration:none;
+color:white;
+text-align:center;
+transition:transform 0.4s;
+
+}
+
+.album img{
+
+width:100%;
+max-width:260px;
+border-radius:6px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+}
+
+.album-info{
+
+margin-top:15px;
+
+}
+
+.album-info h3{
+
+margin:5px 0;
+font-weight:600;
+
+}
+
+.album-info p{
+
+opacity:0.6;
+
+}
+
+.album:hover{
+
+transform:translateY(-8px);
+
+}
+
+.album:hover img{
+
+box-shadow:0 20px 50px rgba(0,0,0,0.8);
+
+}
