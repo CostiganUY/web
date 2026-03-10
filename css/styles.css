@@ -10,17 +10,25 @@ color:white;
 
 
 .hero{
-
 height:100vh;
-
 background-image:url("../assets/img/Algas 2026.png");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
+animation:heroZoom 25s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+
+0%{
+background-size:100%;
+}
+
+100%{
+background-size:115%;
+}
 
 }
 
@@ -124,5 +132,23 @@ background:black;
 margin:10px;
 color:white;
 text-decoration:none;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+
+opacity:0.25;
+
+pointer-events:none;
 
 }
