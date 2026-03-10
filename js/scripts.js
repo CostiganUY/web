@@ -68,3 +68,21 @@ nav.classList.remove("scrolled");
 }
 
 });
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top = window.scrollY + window.innerHeight -100;
+
+if(top > sec.offsetTop){
+
+sec.classList.add("visible");
+
+}
+
+});
+
+});
