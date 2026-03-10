@@ -29,15 +29,6 @@ window.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
-
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
@@ -57,6 +48,8 @@ window.addEventListener("scroll", function(){
 
 const nav = document.getElementById("mainNav");
 
+if(!nav) return;
+
 if(window.scrollY > 50){
 
 nav.classList.add("scrolled");
@@ -71,13 +64,13 @@ nav.classList.remove("scrolled");
 
 const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll",()=>{
+function revealSections(){
+
+const trigger = window.scrollY + window.innerHeight -100;
 
 sections.forEach(sec=>{
 
-const top = window.scrollY + window.innerHeight -100;
-
-if(top > sec.offsetTop){
+if(trigger > sec.offsetTop){
 
 sec.classList.add("visible");
 
@@ -85,4 +78,8 @@ sec.classList.add("visible");
 
 });
 
-});
+}
+
+window.addEventListener("scroll", revealSections);
+
+revealSections();
