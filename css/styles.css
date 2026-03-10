@@ -302,10 +302,15 @@ gap:20px;
 .gallery-grid img{
 
 width:100%;
+max-width:320px;
+height:auto;
 
 border-radius:6px;
 
 transition:transform 0.4s;
+
+display:block;
+margin:auto;
 
 }
 
