@@ -203,8 +203,15 @@ gap:40px;
 .album img{
 
 width:100%;
+max-width:260px;
+height:auto;
+
 border-radius:6px;
+
 transition:transform 0.4s;
+
+display:block;
+margin:auto;
 
 }
 
