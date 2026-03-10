@@ -10,14 +10,20 @@ color:white;
 
 
 .hero{
+
+position:relative;
+
 height:100vh;
 background-image:url("../assets/img/Algas 2026.png");
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 animation:heroZoom 25s ease-in-out infinite alternate;
+
 }
 
 @keyframes heroZoom{
@@ -86,7 +92,6 @@ display:inline-block;
 }
 
 
-
 section{
 
 max-width:900px;
@@ -94,24 +99,16 @@ margin:auto;
 padding:80px 20px;
 text-align:center;
 
-}
-
-
-
-.singles-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:40px;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
 
 }
 
+section.visible{
 
-
-.single{
-
-border-bottom:1px solid #444;
-padding:20px;
+opacity:1;
+transform:translateY(0);
 
 }
 
@@ -326,20 +323,3 @@ transform:scale(1.05);
 
 }
 
-section{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:all 1s ease;
-
-}
-
-section.visible{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
