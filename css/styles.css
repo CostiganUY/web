@@ -506,19 +506,35 @@ color:black;
 
 .galeria{
 
-padding:100px 20px;
+max-width:1200px;
 
-margin-bottom:80px;
+margin:140px auto;
+
+padding:80px 20px;
+
+text-align:center;
 
 }
 
+.galeria h2{
+
+font-family:'Bebas Neue', sans-serif;
+
+letter-spacing:3px;
+
+font-size:2.2rem;
+
+margin-bottom:60px;
+
+color:#af5249;
+
+}
+  
 .gallery-grid{
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
-
-grid-auto-rows:220px;
+grid-template-columns:repeat(3, 1fr);
 
 gap:25px;
 
@@ -562,24 +578,41 @@ grid-column:span 2;
 .gallery-grid img{
 
 width:100%;
-max-width:320px;
-height:auto;
+
+height:100%;
+
+object-fit:cover;
 
 border-radius:6px;
 
-transition:transform 0.4s;
+transition:all 0.4s ease;
 
-display:block;
-margin:auto;
+cursor:pointer;
 
 }
 
 .gallery-grid img:hover{
 
-transform:scale(1.05);
+transform:scale(1.04);
+
+box-shadow:0 25px 40px rgba(0,0,0,0.6);
 
 }
 
+.big{
+
+grid-column:span 2;
+
+grid-row:span 2;
+
+}
+
+.wide{
+
+grid-column:span 2;
+
+}
+  
 .album{
 
 text-decoration:none;
@@ -2056,6 +2089,27 @@ text-align:left;
 .bio h2{
 
 font-size:2rem;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.big,
+.wide{
+
+grid-column:auto;
+
+grid-row:auto;
 
 }
 
