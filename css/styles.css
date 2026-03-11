@@ -533,3 +533,42 @@ z-index:0;
 transform:translate(-50%,-50%) translateX(80px) rotate(25deg);
 
 }
+
+/* =========================
+SECTION
+========================= */
+
+section{
+
+opacity:0;
+transform:translateY(60px);
+
+transition:
+opacity 1s ease,
+transform 1s ease;
+
+}
+
+section.visible{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* =========================
+GALLERY DETAIL
+========================= */
+
+.gallery-grid img{
+
+filter:brightness(0.9);
+
+}
+
+.gallery-grid img:hover{
+
+filter:brightness(1.1);
+transform:scale(1.05);
+
+}
