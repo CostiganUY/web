@@ -403,11 +403,21 @@ justify-items:center;
 }
 
 .album img{
-width:100%;
-max-width:260px;
-border-radius:6px;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-transition:transform 0.4s ease;
+
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:4px;
+
+display:block;
+
+margin:auto;
+
+position:relative;
+z-index:2;
+
 }
 
 .album:hover img{
@@ -907,5 +917,14 @@ margin-bottom:40px;
 section{
 
 padding:90px 20px;
+
+}
+
+/* AJUSTE DE VINYL */
+
+.vinyl{
+
+width:200px;
+height:200px;
 
 }
