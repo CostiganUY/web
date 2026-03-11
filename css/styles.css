@@ -46,6 +46,8 @@ background-size:cover;
 
 background-position:center;
 
+background-repeat:no-repeat;  
+
 display:flex;
 
 align-items:center;
@@ -1397,6 +1399,32 @@ padding:18px 20px;
 .nav-logo img{
 
 height:28px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+background-size:cover;
+
+background-position:center center;
+
+background-repeat:no-repeat;
+
+height:90vh;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+background-position:center 35%;
 
 }
 
