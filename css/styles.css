@@ -818,33 +818,21 @@ align-items:center;
 
 }
 
-.nav-logo{
+.nav-links{
 
-font-weight:600;
+display:flex;
 
-letter-spacing:2px;
+align-items:center;
+
+gap:30px;
 
 }
 
 .nav-links a{
 
-margin-left:25px;
+display:flex;
 
-text-decoration:none;
-
-color:white;
-
-font-size:0.9rem;
-
-opacity:0.8;
-
-transition:0.3s;
-
-}
-
-.nav-links a:hover{
-
-opacity:1;
+align-items:center;
 
 }
 
