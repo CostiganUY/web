@@ -790,17 +790,19 @@ width:100%;
 
 z-index:1000;
 
-padding:20px 30px;
+padding:26px 40px;
 
-transition:0.4s;
+transition:all 0.4s ease;
 
 }
 
 #mainNav.scrolled{
 
-background:rgba(0,0,0,0.85);
+background:rgba(10,10,10,0.75);
 
-backdrop-filter:blur(6px);
+backdrop-filter:blur(10px);
+
+box-shadow:0 4px 20px rgba(0,0,0,0.4);
 
 }
 
@@ -1247,11 +1249,15 @@ transition:all 0.25s ease;
 
 .nav-logo img{
 
-height:26px;
+height:34px;
 
-width:auto;
+transition:transform 0.3s ease;
 
-display:block;
+}
+
+.nav-logo:hover img{
+
+transform:scale(1.05);
 
 }
 
@@ -1352,5 +1358,38 @@ display:flex;
 gap:34px;
 
 align-items:center;
+
+}
+
+/* NAVBAR RESPONSIVE SIN BOTONES SECCION */
+
+@media (max-width:768px){
+
+.nav-container{
+
+grid-template-columns:1fr;
+
+justify-items:center;
+
+}
+
+.nav-left,
+.nav-right{
+
+display:none;
+
+}
+
+#mainNav{
+
+padding:18px 20px;
+
+}
+
+.nav-logo img{
+
+height:28px;
+
+}
 
 }
