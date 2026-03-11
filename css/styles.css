@@ -659,6 +659,24 @@ height:22px;
 height:16px;
 
 }
+
+.nav-links{
+
+gap:18px;
+
+}
+
+.nav-links img{
+
+height:15px;
+
+}
+
+.nav-logo img{
+
+height:22px;
+
+}  
   
 .hero h1{
 
@@ -750,7 +768,11 @@ gap:10px;
 
 .nav-links{
 
-display:none;
+display:flex;
+
+align-items:center;
+
+gap:28px;
 
 }  
   
@@ -1190,5 +1212,53 @@ align-items:center;
 opacity:1;
 
 transform:translateY(-2px);
+
+}
+
+.nav-links img{
+
+height:18px;
+
+width:auto;
+
+display:block;
+
+transition:all 0.25s ease;
+
+}
+
+.nav-logo img{
+
+height:26px;
+
+width:auto;
+
+display:block;
+
+}
+
+.nav-links a{
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.nav-links a img{
+
+opacity:0.85;
+
+}
+
+.nav-links a:hover img{
+
+opacity:1;
+
+transform:translateY(-2px);
+
+filter:brightness(1.2) contrast(1.1);
 
 }
