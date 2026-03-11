@@ -1,56 +1,14 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.3 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+/* =========================
+NAVBAR SCROLL EFFECT
+========================= */
 
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-});
-
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", () => {
 
 const nav = document.getElementById("mainNav");
 
 if(!nav) return;
 
-if(window.scrollY > 50){
+if(window.scrollY > 60){
 
 nav.classList.add("scrolled");
 
@@ -62,17 +20,22 @@ nav.classList.remove("scrolled");
 
 });
 
+
+/* =========================
+SCROLL REVEAL SECTIONS
+========================= */
+
 const sections = document.querySelectorAll("section");
 
 function revealSections(){
 
-const trigger = window.scrollY + window.innerHeight -100;
+const trigger = window.scrollY + window.innerHeight -120;
 
-sections.forEach(sec=>{
+sections.forEach(section => {
 
-if(trigger > sec.offsetTop){
+if(trigger > section.offsetTop){
 
-sec.classList.add("visible");
+section.classList.add("visible");
 
 }
 
@@ -81,17 +44,16 @@ sec.classList.add("visible");
 }
 
 window.addEventListener("scroll", revealSections);
-
 revealSections();
 
-/* LIGHTBOX GALERIA */
+
+/* =========================
+GALLERY LIGHTBOX
+========================= */
 
 const galleryImages = document.querySelectorAll(".gallery-img");
-
 const lightbox = document.getElementById("lightbox");
-
 const lightboxImg = document.getElementById("lightbox-img");
-
 const lightboxClose = document.getElementById("lightbox-close");
 
 galleryImages.forEach(img => {
@@ -99,7 +61,6 @@ galleryImages.forEach(img => {
 img.addEventListener("click", () => {
 
 lightbox.classList.add("active");
-
 lightboxImg.src = img.src;
 
 });
@@ -122,12 +83,23 @@ lightbox.classList.remove("active");
 
 });
 
+
+/* =========================
+HERO FADE ON SCROLL
+========================= */
+
 const heroOverlay = document.querySelector(".hero-overlay");
 
 window.addEventListener("scroll", () => {
 
+if(!heroOverlay) return;
+
 let scroll = window.scrollY;
 
-heroOverlay.style.opacity = 1 - scroll / 500;
+let opacity = 1 - scroll / 500;
+
+if(opacity < 0) opacity = 0;
+
+heroOverlay.style.opacity = opacity;
 
 });
