@@ -1280,3 +1280,41 @@ transform:translateY(-2px);
 filter:brightness(1.2) contrast(1.1);
 
 }
+
+.nav-links a{
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+color:#af5249;
+
+text-decoration:none;
+
+opacity:0.85;
+
+transition:all 0.3s ease;
+
+}
+
+.nav-links a:hover{
+
+opacity:1;
+
+transform:translateY(-2px);
+
+color:#c96a60;
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:34px;
+
+}
