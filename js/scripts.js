@@ -121,3 +121,13 @@ lightbox.classList.remove("active");
 }
 
 });
+
+const heroOverlay = document.querySelector(".hero-overlay");
+
+window.addEventListener("scroll", () => {
+
+let scroll = window.scrollY;
+
+heroOverlay.style.opacity = 1 - scroll / 500;
+
+});
