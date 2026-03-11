@@ -836,6 +836,36 @@ align-items:center;
 
 }
 
+.nav-logo img{
+
+height:28px;
+width:auto;
+display:block;
+
+}
+
+.nav-links img{
+
+height:18px;
+width:auto;
+display:block;
+
+opacity:0.85;
+
+transition:all 0.25s ease;
+
+}
+
+.nav-links a:hover img{
+
+opacity:1;
+
+transform:translateY(-2px);
+
+filter:brightness(1.2);
+
+}
+
 /* ALBUM HIGHLIGHT */
 
 .album-highlight{
