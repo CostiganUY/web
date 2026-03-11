@@ -200,6 +200,60 @@ transition:all 0.3s ease;
 }
 
 
+.bio{
+
+max-width:800px;
+
+margin:140px auto;
+
+padding:60px 20px;
+
+text-align:left;
+
+line-height:1.8;
+
+}
+
+.bio h2{
+
+font-family:'Bebas Neue', sans-serif;
+
+letter-spacing:3px;
+
+font-size:2.4rem;
+
+margin-bottom:30px;
+
+color:#af5249;
+
+text-align:left;
+
+}
+
+.bio p{
+
+font-size:1.05rem;
+
+color:#d6d6d6;
+
+max-width:650px;
+
+.bio::before{
+
+content:"";
+
+display:block;
+
+width:60px;
+
+height:2px;
+
+background:#af5249;
+
+margin-bottom:25px;
+
+}
+
 section{
 
 max-width:900px;
@@ -1982,6 +2036,26 @@ gap:40px;
 .video-item iframe{
 
 height:220px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.bio{
+
+margin:100px auto;
+
+padding:40px 25px;
+
+text-align:left;
+
+}
+
+.bio h2{
+
+font-size:2rem;
 
 }
 
