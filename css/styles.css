@@ -1571,17 +1571,23 @@ content:"";
 
 position:absolute;
 
-bottom:0;
+top:0;
 left:0;
 
 width:100%;
-height:40%;
+height:100%;
 
-background:linear-gradient(
+background:
+linear-gradient(
 to bottom,
-rgba(0,0,0,0),
+rgba(0,0,0,0) 60%,
 rgba(0,0,0,0.7)
-);
+),
+url("https://grainy-gradients.vercel.app/noise.svg");
+
+background-size:cover;
+
+opacity:0.25;
 
 pointer-events:none;
 
@@ -1765,5 +1771,84 @@ padding-top:60px;
 margin-top:10px;
 
 }
+
+}
+
+.album-cover{
+
+position:absolute;
+
+left:8%;
+
+bottom:60px;
+
+width:280px;
+
+border-radius:6px;
+
+box-shadow:0 25px 50px rgba(0,0,0,0.7);
+
+transition:transform 0.6s ease;
+
+}
+
+.album-cover:hover{
+
+transform:scale(1.04);
+
+}
+
+@media (max-width:768px){
+
+.album-cover{
+
+position:relative;
+
+left:auto;
+
+bottom:auto;
+
+width:220px;
+
+margin:90px auto 20px auto;
+
+display:block;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+width:100%;
+
+}
+
+.btn,
+.btn-outline{
+
+width:80%;
+
+text-align:center;
+
+}
+
+}
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
 
 }
