@@ -103,3 +103,19 @@ if(opacity < 0) opacity = 0;
 heroOverlay.style.opacity = opacity;
 
 });
+
+/* =========================
+HERO PARALLAX
+========================= */
+
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+
+if(!hero) return;
+
+let scroll = window.scrollY;
+
+hero.style.backgroundPositionY = scroll * 0.4 + "px";
+
+});
