@@ -119,3 +119,27 @@ let scroll = window.scrollY;
 hero.style.backgroundPositionY = scroll * 0.4 + "px";
 
 });
+
+/* =========================
+SMOOTH SCROLL NAV
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+anchor.addEventListener("click", function(e){
+
+e.preventDefault();
+
+const target = document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+});
