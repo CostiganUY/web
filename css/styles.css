@@ -648,6 +648,18 @@ z-index:2;
 
 @media (max-width:768px){
 
+.nav-logo img{
+
+height:22px;
+
+}
+
+.nav-links img{
+
+height:16px;
+
+}
+  
 .hero h1{
 
 font-size:2.5rem;
@@ -1142,5 +1154,41 @@ animation:grainMove 8s steps(10) infinite;
 90%{transform:translate(10%,5%);}
 
 100%{transform:translate(5%,0%);}
+
+}
+
+/* NAVBAR PNG BUTTONS */
+
+.nav-logo img{
+
+height:28px;
+
+display:block;
+
+}
+
+.nav-links img{
+
+height:18px;
+
+opacity:0.8;
+
+transition:0.3s;
+
+}
+
+.nav-links a{
+
+display:flex;
+
+align-items:center;
+
+}
+
+.nav-links img:hover{
+
+opacity:1;
+
+transform:translateY(-2px);
 
 }
