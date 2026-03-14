@@ -86,19 +86,15 @@ padding:18px 30px;
 /* lados */
 
 .nav-left{
-
-display:flex;
 justify-content:flex-end;
-gap:30px;
-
+gap:36px;
+padding-right:40px;
 }
 
 .nav-right{
-
-display:flex;
 justify-content:flex-start;
-gap:30px;
-
+gap:36px;
+padding-left:40px;
 }
 
 /* links */
@@ -114,7 +110,7 @@ color:#af5249;
 
 text-decoration:none;
 
-font-size:0.95rem;
+font-size:1.05rem;
 
 transition:0.3s;
 
@@ -152,8 +148,16 @@ display:none;
 
 .nav-toggle img{
 
-width:30px;
-cursor:pointer;
+width:22px;
+height:auto;
+
+}
+
+.nav-toggle{
+
+display:block;
+
+margin-left:10px;
 
 }
 
@@ -232,7 +236,11 @@ pointer-events:auto;
 
 .nav-wrapper{
 
-grid-template-columns:auto 1fr auto;
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
 
 }
 
