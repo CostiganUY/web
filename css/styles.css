@@ -750,3 +750,29 @@ height:380px;
 border:none;
 
 }
+
+/* =========================
+VIDEOS SECTION
+========================= */
+
+.videos{
+
+text-align:center;
+
+}
+
+.videos h2{
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:3rem;
+
+letter-spacing:5px;
+
+color:#af5249;
+
+margin-bottom:60px;
+
+text-align:center;
+
+}
