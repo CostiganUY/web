@@ -1045,9 +1045,9 @@ display:block;
 }
 
 .nav-container{
-
-grid-template-columns:1fr auto;
-
+grid-template-columns:auto auto;
+justify-content:space-between;
+align-items:center;
 }
 
 }
