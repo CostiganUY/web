@@ -469,10 +469,10 @@ BIO
 
 .bio{
 max-width:800px;
-margin:140px auto;
-padding:60px 20px;
-text-align:left;
-line-height:1.8;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+line-height:1.7;
 }
 
 .bio h2{
@@ -618,11 +618,6 @@ grid-template-columns:1fr;
 height:360px;
 }
 
-.bio{
-margin:100px auto;
-padding:40px 25px;
-}
-
 }
 
 /* =========================
@@ -672,6 +667,7 @@ SECTION
 ========================= */
 
 section{
+padding:90px 20px;
 
 opacity:0;
 transform:translateY(60px);
@@ -679,7 +675,6 @@ transform:translateY(60px);
 transition:
 opacity 1s ease,
 transform 1s ease;
-
 }
 
 section.visible{
@@ -709,25 +704,6 @@ transform:scale(1.05);
 /* =========================
 HERO FIX
 ========================= */
-
-.hero{
-
-position:relative;
-
-height:100vh;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background-image:url("../assets/img/Algas 2026.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-overflow:hidden;
-
-}
 
 .hero-overlay{
 
@@ -761,6 +737,17 @@ border-radius:6px;
 box-shadow:0 25px 50px rgba(0,0,0,0.7);
 
 z-index:3;
+
+}
+
+animation:floatAlbum 6s ease-in-out infinite;
+}
+
+@keyframes floatAlbum{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
 
 }
 
@@ -1045,32 +1032,7 @@ margin-bottom:40px;
 
 }
 
-section{
-
-padding:90px 20px;
-
-}
-
-/* AJUSTE DE VINYL */
-
-.vinyl{
-
-width:100px;
-height:100px;
-
-}
-
 /* BIO FIX */
-
-.bio{
-
-max-width:800px;
-
-margin:auto;
-
-padding:80px 20px;
-
-}
 
 .bio p{
 
@@ -1088,4 +1050,8 @@ opacity:0.9;
 
 font-style:italic;
 
+}
+
+body{
+padding-top:70px;
 }
