@@ -143,3 +143,26 @@ behavior:"smooth"
 });
 
 });
+
+/* MOBILE MENU */
+
+const toggle = document.querySelector(".mobile-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+toggle.addEventListener("click", () => {
+
+mobileMenu.classList.toggle("active");
+
+});
+
+/* cerrar menu al click */
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+link.addEventListener("click", () => {
+
+mobileMenu.classList.remove("active");
+
+});
+
+});
