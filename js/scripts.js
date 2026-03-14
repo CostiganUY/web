@@ -156,3 +156,39 @@ behavior:"smooth"
 });
 
 });
+
+/* =========================
+ACTIVE NAV SECTION GLOW
+========================= */
+
+const navLinks = document.querySelectorAll(".nav-left a, .nav-right a");
+const pageSections = document.querySelectorAll("section");
+
+function highlightNav(){
+
+let scrollPos = window.scrollY + window.innerHeight/3;
+
+pageSections.forEach(section => {
+
+if(scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight){
+
+navLinks.forEach(link => {
+
+link.classList.remove("nav-active");
+
+if(link.getAttribute("href") === "#" + section.id){
+
+link.classList.add("nav-active");
+
+}
+
+});
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", highlightNav);
+highlightNav();
