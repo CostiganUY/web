@@ -627,4 +627,211 @@ text-shadow:
 0 0 18px rgba(175,82,73,0.25);
 
 }
-  
+ 
+/* =========================
+HERO 2.0
+========================= */
+
+.hero{
+
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+/* fondo */
+
+.hero-bg{
+
+position:absolute;
+
+inset:0;
+
+background-image:url("../assets/img/Algas 2026.png");
+
+background-size:cover;
+background-position:center;
+
+filter:brightness(0.45);
+
+transform:scale(1.1);
+
+z-index:0;
+
+}
+
+/* overlay color */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+120deg,
+rgba(175,82,73,0.25),
+rgba(0,50,40,0.3),
+rgba(0,0,0,0.7)
+);
+
+z-index:1;
+
+}
+
+/* container */
+
+.hero-container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1200px;
+
+width:100%;
+
+padding:0 40px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:80px;
+
+}
+
+/* album */
+
+.hero-album{
+
+width:320px;
+
+border-radius:6px;
+
+box-shadow:0 30px 80px rgba(0,0,0,0.7);
+
+animation:floatAlbum 7s ease-in-out infinite;
+
+}
+
+/* texto */
+
+.hero-text{
+
+max-width:420px;
+
+}
+
+.hero h1{
+
+font-family:'Bebas Neue';
+
+font-size:6rem;
+
+letter-spacing:6px;
+
+color:#af5249;
+
+margin:0;
+
+}
+
+/* subtitulo */
+
+.hero-sub{
+
+margin-top:20px;
+
+font-size:1.2rem;
+
+letter-spacing:2px;
+
+opacity:0.85;
+
+}
+
+/* botones */
+
+.hero-buttons{
+
+margin-top:30px;
+
+display:flex;
+
+gap:15px;
+
+}
+
+/* scroll indicator */
+
+.scroll-indicator{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+width:2px;
+
+height:40px;
+
+background:white;
+
+opacity:0.6;
+
+transform:translateX(-50%);
+
+animation:scrollPulse 2s infinite;
+
+}
+
+@keyframes scrollPulse{
+
+0%{opacity:0.2;height:20px;}
+50%{opacity:1;height:40px;}
+100%{opacity:0.2;height:20px;}
+
+}
+
+@media (max-width:768px){
+
+.hero-container{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:40px;
+
+}
+
+.hero-album{
+
+width:220px;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+}
