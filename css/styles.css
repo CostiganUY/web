@@ -18,6 +18,21 @@ animation:backgroundMove 40s ease infinite;
 padding-top:70px;
 }
 
+/* =========================
+GLOBAL RESPONSIVE LOCK
+========================= */
+
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+}
+
+html, body{
+max-width:100%;
+overflow-x:hidden;
+}
+
 @keyframes backgroundMove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
