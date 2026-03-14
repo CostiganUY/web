@@ -149,13 +149,15 @@ behavior:"smooth"
 const toggle = document.querySelector(".mobile-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
+if(toggle){
+
 toggle.addEventListener("click", () => {
 
 mobileMenu.classList.toggle("active");
 
 });
 
-/* cerrar menu al click */
+}
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
