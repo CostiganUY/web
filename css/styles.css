@@ -33,6 +33,16 @@ max-width:100%;
 overflow-x:hidden;
 }
 
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+iframe{
+max-width:100%;
+}
+
 @keyframes backgroundMove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
@@ -468,6 +478,24 @@ transform 1s ease;
 section.visible{
 opacity:1;
 transform:translateY(0);
+}
+
+/* =========================
+GALLERY-GRID
+========================= */
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
 /* =========================
