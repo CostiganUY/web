@@ -1055,3 +1055,24 @@ font-style:italic;
 body{
 padding-top:70px;
 }
+
+/* =========================
+BOTON MENU FIX
+========================= */
+
+.nav-toggle{
+display:none;
+z-index:2000;
+position:relative;
+}
+
+.mobile-menu{
+z-index:1500;
+}
+
+.nav-toggle img{
+width:22px;
+cursor:pointer;
+pointer-events:auto;
+}
+
