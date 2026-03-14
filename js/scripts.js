@@ -176,3 +176,30 @@ mobileMenu.classList.remove("active");
 });
 
 });
+
+/* NAVBAR MOBILE */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+const toggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if(!toggle || !mobileMenu) return;
+
+toggle.addEventListener("click", () => {
+
+mobileMenu.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+link.addEventListener("click", () => {
+
+mobileMenu.classList.remove("active");
+
+});
+
+});
+
+});
