@@ -9,13 +9,9 @@ const nav = document.getElementById("mainNav");
 if(!nav) return;
 
 if(window.scrollY > 60){
-
 nav.classList.add("scrolled");
-
 }else{
-
 nav.classList.remove("scrolled");
-
 }
 
 });
@@ -34,9 +30,7 @@ const trigger = window.scrollY + window.innerHeight -120;
 sections.forEach(section => {
 
 if(trigger > section.offsetTop){
-
 section.classList.add("visible");
-
 }
 
 });
@@ -76,9 +70,7 @@ lightbox.classList.remove("active");
 lightbox.addEventListener("click", e => {
 
 if(e.target !== lightboxImg){
-
 lightbox.classList.remove("active");
-
 }
 
 });
@@ -95,7 +87,6 @@ window.addEventListener("scroll", () => {
 if(!heroOverlay) return;
 
 let scroll = window.scrollY;
-
 let opacity = 1 - scroll / 500;
 
 if(opacity < 0) opacity = 0;
@@ -103,6 +94,7 @@ if(opacity < 0) opacity = 0;
 heroOverlay.style.opacity = opacity;
 
 });
+
 
 /* =========================
 HERO PARALLAX
@@ -119,6 +111,7 @@ let scroll = window.scrollY;
 hero.style.backgroundPositionY = scroll * 0.4 + "px";
 
 });
+
 
 /* =========================
 SMOOTH SCROLL NAV
@@ -144,40 +137,10 @@ behavior:"smooth"
 
 });
 
+
 /* =========================
 NAVBAR MOBILE
 ========================= */
-
-window.addEventListener("DOMContentLoaded", () => {
-
-const navToggle = document.querySelector(".nav-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-if(!navToggle || !mobileMenu) return;
-
-navToggle.addEventListener("click", () => {
-
-mobileMenu.classList.toggle("active");
-
-});
-
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-link.addEventListener("click", () => {
-
-mobileMenu.classList.remove("active");
-
-});
-
-});
-
-});
-
-});
-
-});
-
-/* NAVBAR MOBILE */
 
 window.addEventListener("DOMContentLoaded", () => {
 
