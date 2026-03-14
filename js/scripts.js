@@ -172,3 +172,26 @@ mobileMenu.classList.remove("active");
 });
 
 });
+
+/* NAVBAR MOBILE Fix */
+
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+navToggle.addEventListener("click", () => {
+
+mobileMenu.classList.toggle("active");
+
+});
+
+/* cerrar menú al elegir */
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+link.addEventListener("click", () => {
+
+mobileMenu.classList.remove("active");
+
+});
+
+});
