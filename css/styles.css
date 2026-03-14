@@ -467,6 +467,10 @@ SECTION ANIMATION
 section{
 padding:90px 20px;
 
+max-width:1200px;
+
+margin:auto;
+
 opacity:0;
 transform:translateY(60px);
 
