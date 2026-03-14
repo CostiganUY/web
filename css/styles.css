@@ -192,7 +192,28 @@ justify-content:center;
 }
 
 .nav-logo img{
+
 height:42px;
+
+transition:
+transform 0.25s ease,
+filter 0.35s ease,
+drop-shadow 0.35s ease;
+
+}
+
+/* glow del logo */
+
+.nav-logo:hover img{
+
+filter:brightness(1.1);
+
+transform:translateY(-1px);
+
+filter:drop-shadow(0 0 4px rgba(175,82,73,0.7))
+       drop-shadow(0 0 10px rgba(175,82,73,0.35))
+       drop-shadow(0 0 18px rgba(175,82,73,0.25));
+
 }
 
 /* =========================
@@ -259,6 +280,18 @@ justify-content:center;
 height:30px;
 
 max-width:100%;
+
+}
+
+@media (max-width:768px){
+
+.nav-logo{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+height:100%;
 
 }
 
@@ -571,3 +604,20 @@ padding:60px;
 text-align:center;
 background:black;
 }
+
+/* =========================
+Botón activo según sección
+========================= */  
+
+.nav-active{
+
+color:#ff7a70 !important;
+
+text-shadow:
+
+0 0 4px rgba(175,82,73,0.6),
+0 0 10px rgba(175,82,73,0.35),
+0 0 18px rgba(175,82,73,0.25);
+
+}
+  
