@@ -426,6 +426,36 @@ gap:80px;
 
 }
 
+.hero-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:80px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-text{
+
+flex:1;
+
+max-width:420px;
+
+}
+
+.hero-album{
+
+flex-shrink:0;
+
+width:320px;
+
+}
+
 /* álbum flotante */
 
 .hero-album{
@@ -538,11 +568,23 @@ letter-spacing:4px;
 
 }
 
-/* botones centrados */
-
 .hero-buttons{
 
-justify-content:center;
+flex-direction:column;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+/* mismo tamaño */
+
+.hero-buttons a{
+
+width:220px;
+
+text-align:center;
 
 }
 
