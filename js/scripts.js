@@ -148,20 +148,18 @@ behavior:"smooth"
 NAVBAR MOBILE
 ========================= */
 
+window.addEventListener("DOMContentLoaded", () => {
+
 const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-if(navToggle){
+if(!navToggle || !mobileMenu) return;
 
 navToggle.addEventListener("click", () => {
 
 mobileMenu.classList.toggle("active");
 
 });
-
-}
-
-/* cerrar al click */
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
@@ -173,24 +171,7 @@ mobileMenu.classList.remove("active");
 
 });
 
-/* NAVBAR MOBILE Fix */
-
-const navToggle = document.querySelector(".nav-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-navToggle.addEventListener("click", () => {
-
-mobileMenu.classList.toggle("active");
-
 });
-
-/* cerrar menú al elegir */
-
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-link.addEventListener("click", () => {
-
-mobileMenu.classList.remove("active");
 
 });
 
