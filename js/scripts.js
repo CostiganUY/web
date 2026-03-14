@@ -146,10 +146,12 @@ behavior:"smooth"
 
 /* MOBILE MENU */
 
+window.addEventListener("DOMContentLoaded", () => {
+
 const toggle = document.querySelector(".mobile-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-if(toggle){
+if(!toggle || !mobileMenu) return;
 
 toggle.addEventListener("click", () => {
 
@@ -157,13 +159,13 @@ mobileMenu.classList.toggle("active");
 
 });
 
-}
-
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 link.addEventListener("click", () => {
 
 mobileMenu.classList.remove("active");
+
+});
 
 });
 
