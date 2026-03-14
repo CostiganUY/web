@@ -964,14 +964,15 @@ font-style:italic;
 .mobile-toggle{
 
 display:none;
-
 cursor:pointer;
+z-index:1001;
 
 }
 
 .mobile-toggle img{
 
-width:26px;
+width:28px;
+height:28px;
 
 filter:invert(1);
 
@@ -1031,6 +1032,12 @@ right:0;
 
 @media (max-width:768px){
 
+.mobile-toggle{
+
+display:block;
+
+}
+
 .nav-left,
 .nav-right{
 
@@ -1038,20 +1045,14 @@ display:none;
 
 }
 
-.mobile-toggle{
-
-display:block;
-
-}
-
 .nav-container{
+
 grid-template-columns:auto auto;
+
 justify-content:space-between;
+
 align-items:center;
-}
 
 }
 
-.mobile-menu{
-background:red;
 }
