@@ -273,16 +273,23 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+height:100%;
+
 }
 
 .nav-logo img{
 
 height:30px;
+width:auto;
 
-max-width:100%;
+display:block;
 
+object-fit:contain;
+
+transform:translateY(-2px);       
+       
 }
-
+ 
 @media (max-width:768px){
 
 .nav-logo{
