@@ -776,3 +776,107 @@ margin-bottom:60px;
 text-align:center;
 
 }
+
+.video-item{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:10px;
+
+}
+
+.video-title{
+
+position:absolute;
+
+top:14px;
+right:18px;
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:0.9rem;
+
+letter-spacing:2px;
+
+color:white;
+
+opacity:0.9;
+
+z-index:2;
+
+transition:
+color 0.25s ease,
+text-shadow 0.35s ease,
+transform 0.25s ease;
+
+}
+
+/* animación al hover */
+
+.video-item:hover .video-title{
+
+color:#ff7a70;
+
+text-shadow:
+
+0 0 4px rgba(175,82,73,0.8),
+0 0 10px rgba(175,82,73,0.5),
+0 0 18px rgba(175,82,73,0.35);
+
+transform:translateY(-2px);
+
+}
+
+.video-item{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:10px;
+
+}
+
+.video-title{
+
+position:absolute;
+
+top:14px;
+right:18px;
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:0.9rem;
+
+letter-spacing:2px;
+
+color:white;
+
+opacity:0.9;
+
+z-index:2;
+
+transition:
+color 0.25s ease,
+text-shadow 0.35s ease,
+transform 0.25s ease;
+
+}
+
+/* animación al hover */
+
+.video-item:hover .video-title{
+
+color:#ff7a70;
+
+text-shadow:
+
+0 0 4px rgba(175,82,73,0.8),
+0 0 10px rgba(175,82,73,0.5),
+0 0 18px rgba(175,82,73,0.35);
+
+transform:translateY(-2px);
+
+}
