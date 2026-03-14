@@ -144,28 +144,30 @@ behavior:"smooth"
 
 });
 
-/* MOBILE MENU */
+/* =========================
+NAVBAR MOBILE
+========================= */
 
-window.addEventListener("DOMContentLoaded", () => {
-
-const toggle = document.querySelector(".mobile-toggle");
+const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-if(!toggle || !mobileMenu) return;
+if(navToggle){
 
-toggle.addEventListener("click", () => {
+navToggle.addEventListener("click", () => {
 
 mobileMenu.classList.toggle("active");
 
 });
+
+}
+
+/* cerrar al click */
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 link.addEventListener("click", () => {
 
 mobileMenu.classList.remove("active");
-
-});
 
 });
 
