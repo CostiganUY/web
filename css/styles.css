@@ -881,38 +881,6 @@ cursor:pointer;
 
 }
 
-/* VINILO */
-
-.vinyl{
-
-position:absolute;
-
-top:50%;
-left:50%;
-
-width:220px;
-height:220px;
-
-background:radial-gradient(
-circle,
-#111 20%,
-#000 21%,
-#111 40%,
-#000 41%,
-#111 60%,
-#000 61%
-);
-
-border-radius:50%;
-
-transform:translate(-50%,-50%) translateX(0);
-
-transition:transform 0.6s ease;
-
-z-index:0;
-
-}
-
 /* TAPA */
 
 .album img{
@@ -932,14 +900,6 @@ box-shadow:0 20px 60px rgba(0,0,0,0.6);
 
 }
 
-/* animación hover */
-
-.album:hover .vinyl{
-
-transform:translate(-50%,-50%) translateX(85px) rotate(30deg);
-
-}
-
 /* =========================
 ALBUM TITLE
 ========================= */
@@ -948,37 +908,36 @@ ALBUM TITLE
 
 display:block;
 
-margin-top:18px;
+margin-top:16px;
 
 font-family:'Bebas Neue', sans-serif;
 
 letter-spacing:2px;
 
-font-size:1.1rem;
+font-size:1.05rem;
 
 color:white;
 
 text-decoration:none;
 
-transition:all 0.35s ease;
+transition:
+
+color 0.3s ease,
+text-shadow 0.35s ease;
 
 }
-
-/* año */
 
 .album-info span{
 
 display:block;
 
-font-size:0.8rem;
+font-size:0.75rem;
 
 opacity:0.6;
 
-margin-top:4px;
+margin-top:3px;
 
 }
-
-/* glow ALGAS */
 
 .album-info:hover{
 
@@ -986,9 +945,9 @@ color:#ff7a70;
 
 text-shadow:
 
-0 0 4px rgba(175,82,73,0.6),
-0 0 12px rgba(175,82,73,0.35),
-0 0 24px rgba(175,82,73,0.25);
+0 0 6px rgba(175,82,73,0.6),
+0 0 14px rgba(175,82,73,0.35),
+0 0 26px rgba(175,82,73,0.25);
 
 }
 
@@ -1006,13 +965,92 @@ width:200px;
 
 }
 
-.album img,
-.vinyl{
+/* =========================
+ALBUM COVER GLOW
+========================= */
 
-width:180px;
-height:180px;
+.album{
+
+width:240px;
+
+text-align:center;
+
+position:relative;
 
 }
+
+.album a img{
+
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:4px;
+
+position:relative;
+
+z-index:2;
+
+transition:
+
+transform 0.35s ease,
+box-shadow 0.35s ease,
+filter 0.35s ease;
+
+}
+
+/* glow rojo desde el fondo */
+
+.album a::before{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:220px;
+height:220px;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(
+
+circle,
+rgba(175,82,73,0.35) 0%,
+rgba(175,82,73,0.15) 40%,
+rgba(175,82,73,0) 70%
+
+);
+
+filter:blur(30px);
+
+opacity:0;
+
+transition:opacity 0.4s ease;
+
+z-index:1;
+
+}
+
+/* hover */
+
+.album:hover a::before{
+
+opacity:1;
+
+}
+
+.album:hover img{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,0.6),
+0 0 20px rgba(175,82,73,0.35);
 
 }
 
