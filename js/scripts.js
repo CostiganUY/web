@@ -194,103 +194,41 @@ window.addEventListener("scroll", highlightNav);
 highlightNav();
 
 /* =========================
-LIGHTBOX GALLERY
+GALLERY LIGHTBOX
 ========================= */
 
-#lightbox{
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
 
-position:fixed;
+galleryImages.forEach(img => {
 
-inset:0;
+img.addEventListener("click", () => {
 
-background:rgba(0,0,0,0.95);
+lightbox.classList.add("active");
+lightboxImg.src = img.src;
 
-display:flex;
+});
 
-align-items:center;
+});
 
-justify-content:center;
+closeBtn.addEventListener("click", () => {
+lightbox.classList.remove("active");
+});
 
-opacity:0;
+lightbox.addEventListener("click", (e) => {
 
-pointer-events:none;
-
-transition:opacity 0.4s ease;
-
-z-index:2000;
-
+if(e.target !== lightboxImg){
+lightbox.classList.remove("active");
 }
 
-#lightbox.active{
+});
 
-opacity:1;
+document.addEventListener("keydown", (e) => {
 
-pointer-events:auto;
-
+if(e.key === "Escape"){
+lightbox.classList.remove("active");
 }
 
-/* imagen */
-
-.lightbox-img{
-
-max-width:90%;
-
-max-height:85%;
-
-border-radius:8px;
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,0.9),
-0 0 40px rgba(175,82,73,0.2);
-
-animation:lightboxZoom 0.4s ease;
-
-}
-
-@keyframes lightboxZoom{
-
-from{
-transform:scale(0.9);
-opacity:0;
-}
-
-to{
-transform:scale(1);
-opacity:1;
-}
-
-}
-
-/* botón cerrar */
-
-.lightbox-close{
-
-position:absolute;
-
-top:30px;
-right:40px;
-
-font-size:28px;
-
-cursor:pointer;
-
-color:white;
-
-opacity:0.7;
-
-transition:all 0.3s ease;
-
-}
-
-.lightbox-close:hover{
-
-opacity:1;
-
-color:#ff7a70;
-
-text-shadow:
-
-0 0 10px rgba(175,82,73,0.5);
-
-}
+});
