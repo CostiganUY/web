@@ -1823,6 +1823,162 @@ font-size:0.75rem;
 }  
 
 /* =========================
+TRANSICIÓN REDES → SHOWS
+========================= */
+
+#shows{
+
+background:linear-gradient(
+180deg,
+rgba(0,0,0,0) 0%,
+rgba(0,0,0,0.5) 40%,
+rgba(0,0,0,0.85) 100%
+);
+
+padding-top:120px;
+
+}
+
+/* =========================
+SHOWS LIST
+========================= */
+
+.shows-container{
+
+max-width:900px;
+
+margin:60px auto 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+/* fila de show */
+
+.show{
+
+display:grid;
+
+grid-template-columns:120px 1fr 1fr auto;
+
+align-items:center;
+
+padding:16px 20px;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+transition:
+
+background 0.3s ease,
+transform 0.25s ease;
+
+}
+
+
+/* hover */
+
+.show:hover{
+
+background:rgba(175,82,73,0.08);
+
+transform:translateX(6px);
+
+}
+
+
+/* columnas */
+
+.show-date{
+
+font-family:'Bebas Neue', sans-serif;
+
+letter-spacing:2px;
+
+color:#af5249;
+
+}
+
+
+.show-city{
+
+font-weight:600;
+
+}
+
+
+.show-venue{
+
+opacity:0.8;
+
+}
+
+
+/* botón entradas */
+
+.show-ticket{
+
+text-decoration:none;
+
+font-family:'Bebas Neue', sans-serif;
+
+letter-spacing:2px;
+
+color:white;
+
+border:1px solid rgba(255,255,255,0.2);
+
+padding:8px 16px;
+
+transition:
+
+all 0.3s ease;
+
+}
+
+
+.show-ticket:hover{
+
+color:#ff7a70;
+
+border-color:#af5249;
+
+box-shadow:
+
+0 0 6px rgba(175,82,73,0.4),
+0 0 14px rgba(175,82,73,0.2);
+
+}
+
+@media (max-width:768px){
+
+.show{
+
+grid-template-columns:1fr;
+
+gap:6px;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.show-ticket{
+
+margin-top:10px;
+
+display:inline-block;
+
+}
+
+}
+
+/* =========================
 LIGHTBOX GALLERY
 ========================= */
 
