@@ -157,6 +157,8 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".lightbox-close");
 
+if(galleryImages.length && lightbox && lightboxImg){
+
 galleryImages.forEach(img => {
 
 img.addEventListener("click", () => {
@@ -168,9 +170,17 @@ lightboxImg.src = img.src;
 
 });
 
+}
+
+if(closeBtn){
+
 closeBtn.addEventListener("click", () => {
 lightbox.classList.remove("active");
 });
+
+}
+
+if(lightbox){
 
 lightbox.addEventListener("click", (e) => {
 
@@ -180,9 +190,11 @@ lightbox.classList.remove("active");
 
 });
 
+}
+
 document.addEventListener("keydown", (e) => {
 
-if(e.key === "Escape"){
+if(e.key === "Escape" && lightbox){
 lightbox.classList.remove("active");
 }
 
