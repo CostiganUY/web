@@ -47,51 +47,6 @@ revealSections();
 
 
 /* =========================
-GALLERY LIGHTBOX
-========================= */
-
-const galleryImages = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const lightboxClose = document.getElementById("lightbox-close");
-
-if(galleryImages && lightbox){
-
-galleryImages.forEach(img => {
-
-img.addEventListener("click", () => {
-
-lightbox.classList.add("active");
-lightboxImg.src = img.src;
-
-});
-
-});
-
-if(lightboxClose){
-
-lightboxClose.addEventListener("click", () => {
-
-lightbox.classList.remove("active");
-
-});
-
-}
-
-lightbox.addEventListener("click", e => {
-
-if(e.target !== lightboxImg){
-
-lightbox.classList.remove("active");
-
-}
-
-});
-
-}
-
-
-/* =========================
 HERO FADE ON SCROLL
 ========================= */
 
