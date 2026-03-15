@@ -975,3 +975,141 @@ z-index:0;
 filter:contrast(1.05) brightness(1.05);
 
 }
+
+/* =========================
+BIO SECTION
+========================= */
+
+.bio{
+
+text-align:center;
+
+}
+
+.bio h2{
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:3rem;
+
+letter-spacing:5px;
+
+color:#af5249;
+
+margin-bottom:50px;
+
+}
+
+.bio-container{
+
+display:grid;
+
+grid-template-columns:320px 1fr;
+
+gap:60px;
+
+align-items:center;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+/* foto */
+
+.bio-photo img{
+
+width:100%;
+
+border-radius:8px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
+
+}
+
+/* texto */
+
+.bio-text{
+
+text-align:left;
+
+line-height:1.8;
+
+font-size:1rem;
+
+opacity:0.9;
+
+}
+
+/* mobile */
+
+@media (max-width:768px){
+
+.bio-container{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.bio-text{
+
+text-align:center;
+
+}
+
+}
+
+.bio-photo{
+
+position:relative;
+
+}
+
+.bio-photo::before{
+
+content:"";
+
+position:absolute;
+
+inset:-40px;
+
+background:radial-gradient(
+circle,
+rgba(175,82,73,0.25),
+transparent 70%
+);
+
+filter:blur(40px);
+
+z-index:-1;
+
+}
+
+.bio-photo{
+
+position:relative;
+
+}
+
+.bio-photo::before{
+
+content:"";
+
+position:absolute;
+
+inset:-40px;
+
+background:radial-gradient(
+circle,
+rgba(175,82,73,0.25),
+transparent 70%
+);
+
+filter:blur(40px);
+
+z-index:-1;
+
+}
