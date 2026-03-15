@@ -2207,3 +2207,61 @@ opacity:0.5;
 margin-top:10px;
 
 }
+
+/* =========================
+BACK TO TOP
+========================= */
+
+.back-to-top{
+
+margin-top:30px;
+
+}
+
+.back-to-top a{
+
+font-family:'Bebas Neue', sans-serif;
+
+font-size:1.8rem;
+
+color:white;
+
+text-decoration:none;
+
+opacity:0.7;
+
+transition:
+
+opacity 0.3s ease,
+transform 0.3s ease,
+text-shadow 0.3s ease;
+
+}
+
+.back-to-top a:hover{
+
+opacity:1;
+
+transform:translateY(-4px);
+
+text-shadow:
+
+0 0 6px rgba(175,82,73,0.6),
+0 0 16px rgba(175,82,73,0.35),
+0 0 28px rgba(175,82,73,0.25);
+
+}
+
+@keyframes floatArrow{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-4px);}
+100%{transform:translateY(0);}
+
+}
+
+.back-to-top a{
+
+animation:floatArrow 3s ease-in-out infinite;
+
+}
