@@ -2079,3 +2079,131 @@ text-shadow:
 0 0 10px rgba(175,82,73,0.5);
 
 }
+
+/* =========================
+TRANSICIÓN SHOWS → FOOTER
+========================= */
+
+footer{
+
+background:linear-gradient(
+180deg,
+rgba(0,0,0,0.85) 0%,
+rgba(0,0,0,0.95) 50%,
+#000 100%
+);
+
+padding:120px 20px 60px;
+
+text-align:center;
+
+position:relative;
+
+}  
+
+/* =========================
+FOOTER CONTAINER
+========================= */
+
+.footer-container{
+
+max-width:900px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:30px;
+
+}
+
+
+/* =========================
+LOGO
+========================= */
+
+.footer-logo img{
+
+width:120px;
+
+opacity:0.85;
+
+transition:
+
+transform 0.35s ease,
+filter 0.35s ease;
+
+}
+
+.footer-logo img:hover{
+
+transform:translateY(-3px);
+
+filter:
+
+drop-shadow(0 0 6px rgba(175,82,73,0.5))
+drop-shadow(0 0 16px rgba(175,82,73,0.25));
+
+}
+
+
+/* =========================
+CONTACT
+========================= */
+
+.footer-contact p{
+
+font-family:'Bebas Neue', sans-serif;
+
+letter-spacing:2px;
+
+opacity:0.7;
+
+margin-bottom:6px;
+
+}
+
+.footer-contact a{
+
+text-decoration:none;
+
+color:white;
+
+letter-spacing:1px;
+
+transition:
+
+color 0.3s ease,
+text-shadow 0.35s ease;
+
+}
+
+.footer-contact a:hover{
+
+color:#ff7a70;
+
+text-shadow:
+
+0 0 6px rgba(175,82,73,0.5),
+0 0 16px rgba(175,82,73,0.3);
+
+}
+
+
+/* =========================
+COPYRIGHT
+========================= */
+
+.footer-copy{
+
+font-size:0.8rem;
+
+opacity:0.5;
+
+margin-top:10px;
+
+}
