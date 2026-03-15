@@ -6,15 +6,7 @@ const nav = document.getElementById("mainNav");
 
 if(nav){
 
-window.addEventListener("scroll", () => {
-
-if(window.scrollY > 60){
-nav.classList.add("scrolled");
-}else{
-nav.classList.remove("scrolled");
-}
-
-});
+window.addEventListener("scroll", revealSections, { passive:true });
 
 }
 
@@ -41,49 +33,19 @@ section.classList.add("visible");
 
 }
 
-window.addEventListener("scroll", revealSections);
-
+window.addEventListener("scroll", revealSections, { passive:true });
 revealSections();
-
-
-/* =========================
-HERO FADE ON SCROLL
-========================= */
-
-const heroOverlay = document.querySelector(".hero-overlay");
-
-if(heroOverlay){
-
-window.addEventListener("scroll", () => {
-
-let scroll = window.scrollY;
-
-let opacity = 1 - scroll / 500;
-
-if(opacity < 0) opacity = 0;
-
-heroOverlay.style.opacity = opacity;
-
-});
-
-}
 
 
 /* =========================
 HERO PARALLAX
 ========================= */
 
-const hero = document.querySelector(".hero");
+const hero = document.querySelector(".hero-bg");
 
 if(hero){
 
-window.addEventListener("scroll", () => {
-
-let scroll = window.scrollY;
-
-hero.style.backgroundPositionY = scroll * 0.4 + "px";
-
-});
+window.addEventListener("scroll", revealSections, { passive:true });
 
 }
 
@@ -145,7 +107,7 @@ link.classList.add("nav-active");
 
 }
 
-window.addEventListener("scroll", highlightNav);
+window.addEventListener("scroll", revealSections, { passive:true });
 highlightNav();
 
 /* =========================
