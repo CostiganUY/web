@@ -192,3 +192,105 @@ link.classList.add("nav-active");
 
 window.addEventListener("scroll", highlightNav);
 highlightNav();
+
+/* =========================
+LIGHTBOX GALLERY
+========================= */
+
+#lightbox{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,0.95);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:opacity 0.4s ease;
+
+z-index:2000;
+
+}
+
+#lightbox.active{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+/* imagen */
+
+.lightbox-img{
+
+max-width:90%;
+
+max-height:85%;
+
+border-radius:8px;
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,0.9),
+0 0 40px rgba(175,82,73,0.2);
+
+animation:lightboxZoom 0.4s ease;
+
+}
+
+@keyframes lightboxZoom{
+
+from{
+transform:scale(0.9);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* botón cerrar */
+
+.lightbox-close{
+
+position:absolute;
+
+top:30px;
+right:40px;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:white;
+
+opacity:0.7;
+
+transition:all 0.3s ease;
+
+}
+
+.lightbox-close:hover{
+
+opacity:1;
+
+color:#ff7a70;
+
+text-shadow:
+
+0 0 10px rgba(175,82,73,0.5);
+
+}
