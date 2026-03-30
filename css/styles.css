@@ -9,13 +9,18 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Inter, sans-serif;
-color:white;
+color:#ece4cf;
 
 background:radial-gradient(circle at 20% 30%, #141414, #050505);
 background-size:200% 200%;
 animation:backgroundMove 60s ease infinite;
 
 padding-top:80px;
+}
+
+body{
+background:#ece4cf;
+color:#06181c;
 }
 
 /* =========================
@@ -97,8 +102,11 @@ position:fixed;
 top:0;
 width:100%;
 
-background:rgba(0,0,0,0.35);
-backdrop-filter:blur(0px);
+background:rgba(236,228,207,0.85);
+
+backdrop-filter:blur(8px);
+
+border-bottom:1px solid rgba(6,24,28,0.08);
 
 transition:all 0.35s ease;
 
@@ -107,11 +115,11 @@ z-index:1000;
 
 #mainNav.scrolled{
 
-background:rgba(10,10,10,0.75);
+background:rgba(236,228,207,0.95);
 
 backdrop-filter:blur(14px);
 
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
+box-shadow:0 10px 30px rgba(6,24,28,0.15);
 
 border-bottom:1px solid rgba(255,255,255,0.05);
 
@@ -243,51 +251,30 @@ NAVBAR MOBILE GRID
 
 .nav-wrapper{
 
-grid-template-columns:1fr auto 1fr;
-grid-template-rows:auto auto auto;
-
-gap:8px 12px;
-
-padding:12px 16px;
+display:flex;
+justify-content:center;
+align-items:center;
 
 }
 
 .nav-left,
 .nav-right{
-
-display:grid;
-grid-template-rows:auto auto auto;
-
-gap:4px;
-
+display:none;
 }
-
-.nav-left{justify-items:end;}
-.nav-right{justify-items:start;}
 
 .nav-logo{
 
-grid-column:2;
-grid-row:1 / span 3;
-
+margin:0 auto;
 display:flex;
-align-items:center;
 justify-content:center;
 
 }
 
 .nav-logo img{
 
-height:42px;
-transform:translateY(-2px);
-
-}
-
-.nav-left a,
-.nav-right a{
-
-font-size:0.8rem;
-letter-spacing:1.3px;
+display:block;
+margin:auto;
+max-height:35px;
 
 }
 
@@ -324,12 +311,27 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
-filter:brightness(0.45);
+filter:brightness(0.65);
 
-animation:heroZoom 25s ease-in-out infinite alternate;
+animation:heroZoom 15s ease-in-out infinite alternate;
 
 z-index:0;
 
+}
+
+.hero-container{
+position:relative;
+z-index:2;
+}
+
+.hero-container{
+position:relative;
+z-index:2;
+}
+
+.hero-album{
+position:relative;
+z-index:2;
 }
 
 @keyframes heroZoom{
@@ -341,21 +343,41 @@ z-index:0;
 
 /* overlay */
 
+.hero::before{
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:120px;
+
+background:linear-gradient(
+to bottom,
+#ece4cf,
+transparent
+);
+
+z-index:2;
+
+}
+
 .hero::after{
 
 content:"";
-
 position:absolute;
-inset:0;
+bottom:0;
+left:0;
+width:100%;
+height:140px;
 
 background:linear-gradient(
-120deg,
-rgba(175,82,73,0.25),
-rgba(0,50,40,0.25),
-rgba(0,0,0,0.75)
+to top,
+#ece4cf,
+transparent
 );
 
-z-index:1;
+z-index:2;
 
 }
 
@@ -363,20 +385,12 @@ z-index:1;
 
 .hero-container{
 
-position:relative;
-
-z-index:2;
-
-max-width:1200px;
-width:100%;
-
 display:flex;
+flex-direction:row-reverse;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 
-gap:80px;
-
-padding:0 40px;
+gap:60px;
 
 }
 
@@ -390,7 +404,7 @@ border-radius:6px;
 
 box-shadow:0 30px 80px rgba(0,0,0,0.7);
 
-animation:floatAlbum 7s ease-in-out infinite;
+animation:floatAlbum 5s ease-in-out infinite;
 
 }
 
@@ -405,22 +419,32 @@ animation:floatAlbum 7s ease-in-out infinite;
 /* texto */
 
 .hero-text{
+text-align:center;
+max-width:400px;
+}
 
-max-width:420px;
+.hero-text{
+color:#ece4cf;
+}
 
+.hero-text h1{
+color:#ece4cf;
 }
 
 .hero h1{
 
 font-family:'Bebas Neue', sans-serif;
-
 font-size:5.5rem;
-
 letter-spacing:5px;
 
 color:#af5249;
 
 margin:0;
+
+text-shadow:
+0 0 10px rgba(6,24,28,0.6),
+0 0 30px rgba(6,24,28,0.4),
+0 10px 40px rgba(6,24,28,0.6);
 
 }
 
@@ -428,12 +452,19 @@ margin:0;
 
 margin-top:20px;
 
-font-size:1.2rem;
-
+font-family:'Bebas Neue', sans-serif;  
+font-size:1.4rem;
 letter-spacing:2px;
 
 opacity:0.9;
 
+color:#ece4cf;
+
+}
+
+.hero-sub{
+color:#ece4cf;
+opacity:0.8;
 }
 
 /* botones */
@@ -443,8 +474,9 @@ opacity:0.9;
 margin-top:30px;
 
 display:flex;
-
 gap:16px;
+
+justify-content:center;
 
 }
 
@@ -507,7 +539,7 @@ BUTTONS
 
 .btn{
 background:#af5249;
-color:white;
+color:#ece4cf;
 
 padding:14px 28px;
 
@@ -548,11 +580,11 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 
 .btn-outline{
 
-border:1px solid white;
+border:1px solid #ece4cf;
 
 padding:14px 28px;
 
-color:white;
+color:#ece4cf;
 
 text-decoration:none;
 
@@ -565,8 +597,8 @@ transition:all 0.35s ease;
 
 .btn-outline:hover{
 
-background:white;
-color:black;
+background:#06181c;
+color:#ece4cf;
 
 transform:translateY(-3px);
 
@@ -578,16 +610,10 @@ HERO SPOTIFY TRANSITION
 
 .listen{
 
-margin-top:-80px;
+margin-top:40px;
+padding-top:60px;
 
-padding-top:120px;
-
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0) 0%,
-rgba(0,0,0,0.9) 40%,
-rgba(0,0,0,1) 100%
-);
+background:#ece4cf;
 
 }
 
@@ -603,20 +629,9 @@ max-width:1200px;
 
 margin:auto;
 
-opacity:0;
-transform:translateY(60px);
-
 transition:
 opacity 1s ease,
 transform 1s ease;
-
-}
-
-section.visible{
-
-opacity:1;
-
-transform:translateY(0);
 
 }
 
@@ -625,6 +640,8 @@ SECTION TEXT STYLE
 ========================= */
 
 .section-text{
+
+font-family:'Oswald', sans-serif;  
 
 max-width:720px;
 
@@ -640,6 +657,10 @@ opacity:0.9;
 
 letter-spacing:0.3px;
 
+}
+
+.section-text{
+color:#06181c;
 }
 
 @media (max-width:768px){
@@ -728,8 +749,9 @@ GALLERY
 
 .gallery-grid{
 
-columns:3;
-column-gap:18px;
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:18px;
 
 max-width:1200px;
 margin:auto;
@@ -835,13 +857,7 @@ TRANSICIÓN GALERÍA → DISCOGRAFÍA
 
 #discografia{
 
-background:linear-gradient(
-180deg,
-rgba(0,0,0,0) 0%,
-rgba(0,0,0,0.35) 40%,
-rgba(0,0,0,0.7) 100%
-);
-
+background:#ece4cf;
 padding-top:120px;
 
 }
@@ -907,7 +923,9 @@ ALBUM TITLE
 
 display:block;
 
-margin-top:16px;
+margin-top:10px;
+
+text-align:center;  
 
 font-family:'Bebas Neue', sans-serif;
 
@@ -915,7 +933,7 @@ letter-spacing:2px;
 
 font-size:1.05rem;
 
-color:white;
+color:#06181c;
 
 text-decoration:none;
 
@@ -1112,7 +1130,7 @@ text-decoration:none;
 width:34px;
 height:34px;
 
-fill:white;
+fill:#ece4cf;
 
 transition:
 
@@ -1169,7 +1187,7 @@ padding:60px;
 
 text-align:center;
 
-background:black;
+background:#ece4cf;
 
 }
 
@@ -1347,10 +1365,6 @@ display:block;
 position:relative;
 }
 
-.video-item iframe{
-pointer-events:none;
-}
-
 .video-title{
 
 position:absolute;
@@ -1364,7 +1378,7 @@ font-size:0.9rem;
 
 letter-spacing:2px;
 
-color:white;
+color:#ece4cf;
 
 opacity:0.9;
 
@@ -1378,7 +1392,15 @@ transform 0.25s ease;
 }
 
 .video-grid{
-gap:30px;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+
+gap:30px; 
+
+max-width:1100px;
+margin:auto;
+
 }
 
 /* animación al hover */
@@ -1420,7 +1442,7 @@ font-size:0.9rem;
 
 letter-spacing:2px;
 
-color:white;
+color:#ece4cf;
 
 opacity:0.9;
 
@@ -1588,7 +1610,8 @@ margin:auto;
 
 .bio-photo img{
 
-width:75%;
+width:100%;
+max-width:500px;
 margin:auto;
 display:block;
 border-radius:6px;
@@ -1635,8 +1658,8 @@ margin:auto;
 
 .bio-text p{
 
-font-size:0.95rem;
-line-height:1.7;
+font-size:1.1rem;
+line-height:1.8;
 letter-spacing:0.4px;
 
 }
@@ -1759,7 +1782,7 @@ ICON
 width:38px;
 height:38px;
 
-filter:brightness(0) invert(1);
+filter:brightness(0) saturate(100%) invert(8%) sepia(20%) saturate(800%) hue-rotate(150deg);
 
 transition:
 
@@ -1785,7 +1808,7 @@ font-size:0.9rem;
 
 letter-spacing:2px;
 
-color:white;
+color:#ece4cf;
 
 opacity:0;
 
@@ -1868,13 +1891,7 @@ TRANSICIÓN REDES → SHOWS
 
 #shows{
 
-background:linear-gradient(
-180deg,
-rgba(0,0,0,0) 0%,
-rgba(0,0,0,0.5) 40%,
-rgba(0,0,0,0.85) 100%
-);
-
+background:#ece4cf;
 padding-top:120px;
 
 }
@@ -1968,9 +1985,9 @@ font-family:'Bebas Neue', sans-serif;
 
 letter-spacing:2px;
 
-color:white;
-
-border:1px solid rgba(255,255,255,0.2);
+color:#06181c;
+  
+border:1px solid rgba(6,24,28,0.2);
 
 padding:8px 16px;
 
@@ -2100,7 +2117,7 @@ font-size:28px;
 
 cursor:pointer;
 
-color:white;
+color:#ece4cf;
 
 opacity:0.7;
 
@@ -2126,20 +2143,13 @@ TRANSICIÓN SHOWS → FOOTER
 
 footer{
 
-background:linear-gradient(
-180deg,
-rgba(0,0,0,0.85) 0%,
-rgba(0,0,0,0.95) 50%,
-#000 100%
-);
+background:#ece4cf;
 
 padding:120px 20px 60px;
 
 text-align:center;
 
-position:relative;
-
-}  
+}
 
 /* =========================
 FOOTER CONTAINER
@@ -2210,7 +2220,7 @@ margin-bottom:6px;
 
 text-decoration:none;
 
-color:white;
+color:#06181c;
 
 letter-spacing:1px;
 
@@ -2263,7 +2273,8 @@ text-align:center;
 font-size:1.4rem;
 letter-spacing:2px;
 
-color:#bbb;
+color:#06181c;
+border-color:#06181c;
 
 text-decoration:none;
 
@@ -2279,7 +2290,7 @@ transition:all .3s ease;
 
 .back-to-top a:hover{
 
-color:white;
+color:#06181c;
 border-color:#af5249;
 
 }
@@ -2318,7 +2329,7 @@ transition:all .3s ease;
 
 .back-to-top a:hover{
 
-color:white;
+color:#ece4cf;
 border-color:#af5249;
 
 }
@@ -2361,7 +2372,26 @@ VIDEO FIX
 ========================= */
 
 .video-item{
-cursor:pointer;
+  cursor:pointer;
+  position:relative;
+  z-index:2;
+}
+
+.video-item iframe{
+  pointer-events:none;
+  position:relative;
+  z-index:1;
+}
+
+@media (max-width:768px){
+
+.video-grid{
+
+grid-template-columns:1fr;
+gap:20px;
+
+}
+
 }
 
 /* =========================
@@ -2439,3 +2469,35 @@ box-shadow:
 
 }
 
+/* =========================
+FIX HERO LISTEN
+========================= */
+
+@media (max-width:768px){
+
+.hero{
+height:auto;
+min-height:100vh;
+padding-bottom:40px;
+}
+
+.listen{
+margin-top:40px;
+padding-top:40px;
+position:relative;
+z-index:2;
+}
+
+}
+
+/* =========================
+FIX PARA LIGHTBOX
+========================= */
+
+#lightbox{
+  z-index:9999;
+}
+
+.gallery-grid img{
+  cursor:pointer;
+}
