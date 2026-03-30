@@ -124,8 +124,6 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".lightbox-close");
 
-if(galleryImages.length && lightbox && lightboxImg){
-
 galleryImages.forEach(img => {
 
 img.addEventListener("click", () => {
@@ -137,17 +135,9 @@ lightboxImg.src = img.src;
 
 });
 
-}
-
-if(closeBtn){
-
 closeBtn.addEventListener("click", () => {
 lightbox.classList.remove("active");
 });
-
-}
-
-if(lightbox){
 
 lightbox.addEventListener("click", (e) => {
 
@@ -157,15 +147,26 @@ lightbox.classList.remove("active");
 
 });
 
-}
-
 document.addEventListener("keydown", (e) => {
 
-if(e.key === "Escape" && lightbox){
+if(e.key === "Escape"){
 lightbox.classList.remove("active");
 }
 
 });
+
+const bioImage = document.querySelector(".bio-photo img");
+
+if(bioImage){
+
+bioImage.addEventListener("click", () => {
+
+lightbox.classList.add("active");
+lightboxImg.src = bioImage.src;
+
+});
+
+}
 
 /* =========================
 NAVBAR DINAMICO
@@ -199,19 +200,21 @@ VIDEOS FIX
 
 document.querySelectorAll(".video-item").forEach(video => {
 
-video.addEventListener("click", () => {
+  video.addEventListener("click", () => {
 
-window.open(video.dataset.link, "_blank");
+    const link = video.getAttribute("data-link");
+
+    if(link){
+      window.open(link, "_blank");
+    }
+
+  });
 
 });
 
 /* =========================
-SECCION FIX
-========================= */  
-
-});
-
-const sections = document.querySelectorAll("section");
+SECCIONES FIX
+========================= */
 
 const observer = new IntersectionObserver(entries => {
 
