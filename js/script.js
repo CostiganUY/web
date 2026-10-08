@@ -142,7 +142,17 @@ const galleries = {
       "assets/img/gallery/balzo/Balzo2.webp",
       "assets/img/gallery/balzo/Balzo3.webp",
       "assets/img/gallery/balzo/Balzo4.webp",
-      "assets/img/gallery/balzo/Balzo5.webp"
+      "assets/img/gallery/balzo/Balzo5.webp",
+      "assets/img/gallery/balzo/Balzo6.webp",
+      "assets/img/gallery/balzo/Balzo7.webp",
+      "assets/img/gallery/balzo/Balzo8.webp",
+      "assets/img/gallery/balzo/Balzo9.webp",
+      "assets/img/gallery/balzo/Balzo10.webp",
+      "assets/img/gallery/balzo/Balzo11.webp",
+      "assets/img/gallery/balzo/Balzo12.webp",
+      "assets/img/gallery/balzo/Balzo13.webp",
+      "assets/img/gallery/balzo/Balzo14.webp", 
+      "assets/img/gallery/balzo/Balzo15.webp"
     ]
   },
 
